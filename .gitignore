@@ -7,3 +7,4 @@ data/*.lst
 data/*.pkl
 venvpy
 .idea
+data/formula_images_processed.tar.gz
