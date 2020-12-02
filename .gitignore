@@ -6,3 +6,4 @@ data/formula_images_processed
 data/*.lst
 data/*.pkl
 venvpy
+.idea
