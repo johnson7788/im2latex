@@ -28,7 +28,7 @@ Deep CNN编码器+ LSTM注意力解码器，图片转换成Latex公式，Image t
 
 
 **安装依赖:**
-
+对依赖要求不严格，任意版本均可
 ```bash
 pip install -r requirement.txt
 ```
