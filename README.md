@@ -1,6 +1,3 @@
-
-
-
 # Im2Latex 图片转换成Latex公式
 
 ![License](https://img.shields.io/apm/l/vim-mode.svg)
@@ -50,9 +47,17 @@ tar -zxvf formula_images_processed.tar.gz
 
 **预处理:**
 
+读取测试集，验证集，训练集，保存成图片tensor和公式文本对的形式，做成一个list，保存成pkl
+
 ```bash
 python preprocess.py
+
+生成：
+test.pkl
+train.pkl
+validate.pkl
 ```
+
 
 **构建 vocab**
 ```bash
@@ -61,12 +66,19 @@ python build_vocab.py
 
 **训练:**
 
+```
+python  train.py --data_path=data --save_dir=output --dropout=0.2 --add_position_features --epoches=25 --max_len=150
+```
      python train.py \
           --data_path=[data dir] \
           --save_dir=[the dir for saving ckpts] \
           --dropout=0.2 --add_position_features \
           --epoches=25 --max_len=150
 **评估:**
+
+```buildoutcfg
+python evaluate.py --split=test --model_path=output --data_path=data --batch_size=32
+```
 
 ```bash
 python evaluate.py --split=test \
