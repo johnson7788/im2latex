@@ -52,10 +52,12 @@ tar -zxvf formula_images_processed.tar.gz
 ```bash
 python preprocess.py
 
-生成：
-test.pkl
-train.pkl
-validate.pkl
+生成：train文件有13GB
+-rw-r--r--      1 admin  staff   2.6G Dec  2 13:07 test.pkl
+-rw-r--r--      1 admin  staff    13G Dec  2 13:10 train.pkl
+-rw-r--r--      1 admin  staff   1.4G Dec  2 13:06 validate.pkl
+-rw-r--r--      1 admin  staff   6.2K Dec  2 13:12 vocab.pkl
+
 ```
 
 
