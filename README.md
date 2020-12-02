@@ -1,15 +1,14 @@
 
 
 
-# Im2Latex
+# Im2Latex 图片转换成Latex公式
 
 ![License](https://img.shields.io/apm/l/vim-mode.svg)
 
-Deep CNN Encoder + LSTM Decoder with Attention for Image to Latex, the pytorch implemention of the model architecture used by the [Seq2Seq for LaTeX generation](https://guillaumegenthial.github.io/image-to-latex.html)
+Deep CNN编码器+ LSTM注意力解码器，图片转换成Latex公式，Image to Latex，该模型是pytorch实现的  [Seq2Seq for LaTeX generation](https://guillaumegenthial.github.io/image-to-latex.html)
 
 
-
-## Sample results from this implemention
+## 运行的样本结果展示
 
 
 
@@ -19,7 +18,7 @@ Deep CNN Encoder + LSTM Decoder with Attention for Image to Latex, the pytorch i
 
 
 
-## Experimental results on the IM2LATEX-100K  test dataset
+## 在IM2LATEX-100K测试数据集上的实验结果 
 
 | BLUE-4 | Edit Distance | Exact Match |
 | ------ | ------------- | ----------- |
@@ -27,17 +26,17 @@ Deep CNN Encoder + LSTM Decoder with Attention for Image to Latex, the pytorch i
 
 
 
-## Getting Started
+## 开始
 
 
 
-**Install dependency:**
+**安装依赖:**
 
 ```bash
 pip install -r requirement.txt
 ```
 
-**Download the dataset for training:**
+**下载数据集进行训练:**
 
 ```bash
 cd data
@@ -49,25 +48,25 @@ wget http://lstm.seas.harvard.edu/latex/data/im2latex_formulas.norm.lst
 tar -zxvf formula_images_processed.tar.gz
 ```
 
-**Preprocess:**
+**预处理:**
 
 ```bash
 python preprocess.py
 ```
 
-**Build vocab**
+**构建 vocab**
 ```bash
 python build_vocab.py
 ```
 
-**Train:**
+**训练:**
 
      python train.py \
           --data_path=[data dir] \
           --save_dir=[the dir for saving ckpts] \
           --dropout=0.2 --add_position_features \
           --epoches=25 --max_len=150
-**Evaluate:**
+**评估:**
 
 ```bash
 python evaluate.py --split=test \

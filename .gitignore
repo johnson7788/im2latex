@@ -5,5 +5,4 @@ test.py
 data/formula_images_processed
 data/*.lst
 data/*.pkl
-
-
+venvpy
