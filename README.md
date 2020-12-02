@@ -63,6 +63,7 @@ python preprocess.py
 
 **构建 vocab**
 ```bash
+# 在data目录下生成 vocab.pkl
 python build_vocab.py
 ```
 

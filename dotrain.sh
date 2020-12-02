@@ -1,0 +1,1 @@
+python train.py --data_path=data --save_dir=output --dropout=0.2 --add_position_features --epoches=25 --max_len=150
