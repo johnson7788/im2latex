@@ -67,7 +67,7 @@ python build_vocab.py
 **训练:**
 
 ```
-python  train.py --data_path=data --save_dir=output --dropout=0.2 --add_position_features --epoches=25 --max_len=150
+python train.py --data_path=data --save_dir=output --dropout=0.2 --add_position_features --epoches=25 --max_len=150
 ```
      python train.py \
           --data_path=[data dir] \
@@ -85,8 +85,8 @@ python evaluate.py --split=test \
      --model_path=[the path to model] \
      --data_path=[data dir] \
      --batch_size=32 \
-     --ref_path=[the file to store reference] \
-     --result_path=[the file to store decoding result]
+     --ref_path=[the file to store reference] \    #保存引用的位置
+     --result_path=[the file to store decoding result]   #保存生成结果
 ```
 
 
