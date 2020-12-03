@@ -21,7 +21,14 @@ def preprocess(data_dir, split):
     pairs = []
     transform = transforms.ToTensor()
     with open(split_file, 'r') as f:
+        total = 50000
+        count = 0
         for line in f:
+            count += 1
+            # 防止pkl文件过大，舍弃一部分数据
+            if count >=total:
+                print(f"只使用了{total}条数据")
+                break
             img_name, formula_id = line.strip('\n').split()
             # load img and its corresponding formula
             img_path = join(images_dir, img_name)
