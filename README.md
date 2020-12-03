@@ -35,6 +35,7 @@ pip install -r requirement.txt
 
 **下载数据集进行训练:**
 # 一共有103536张LaTeX公式图片
+bash -x download_data.sh
 ```bash
 cd data
 wget http://lstm.seas.harvard.edu/latex/data/im2latex_validate_filter.lst
@@ -60,7 +61,6 @@ python preprocess.py
 
 ```
 
-
 **构建 vocab**
 ```bash
 # 在data目录下生成 vocab.pkl
@@ -68,7 +68,7 @@ python build_vocab.py
 ```
 
 **训练:**
-
+bash dotrain.sh
 ```
 python train.py --data_path=data --save_dir=output --dropout=0.2 --add_position_features --epoches=25 --max_len=150
 ```
