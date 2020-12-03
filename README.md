@@ -34,7 +34,7 @@ pip install -r requirement.txt
 ```
 
 **下载数据集进行训练:**
-
+# 一共有103536张LaTeX公式图片
 ```bash
 cd data
 wget http://lstm.seas.harvard.edu/latex/data/im2latex_validate_filter.lst
